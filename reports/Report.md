@@ -1,7 +1,7 @@
 # Report
 ## Hyper Parameters
 
-num_episodes = 1000\
+num_episodes = 1200\
 pretrain_length = 25000\
 batch_size = 128\
 buffer_size = int(3e5)\
