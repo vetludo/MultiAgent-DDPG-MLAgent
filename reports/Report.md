@@ -1,22 +1,24 @@
 # Report
 ## Hyper Parameters
 
-N_EPISODE = 500\
-MAX_T = 1000\
-BUFFER_SIZE = int(5e5)  # replay buffer size\
-BATCH_SIZE = 128  # minibatch size\
-GAMMA = 0.99  # discount factor\
-TAU = 1e-3  # for soft update of target parameters\
-UPDATE_EVERY = 350\
-UPDATE_TYPE = 'hard'\
-LR_ACTOR = 5e-4  # learning rate of the actor\
-LR_CRITIC = 7.5e-4  # learning rate of the critic\
-WEIGHT_DECAY = 0  # L2 weight decay\
-E_START = 0.2\
-E_MIN = 0.03\
-E_DECAY = 0.999\
-V_MIN = 0\
-V_MAX = 0.3\
-NUM_ATOMS = 100
+num_episodes = 1000\
+pretrain_length = 25000\
+batch_size = 128\
+buffer_size = int(3e5)\
+actor_learn_rate = 5e-4\
+critic_learn_rate = 3e-4\
+gamma = 0.99\
+tau = 1e-4\
+e = 0.3\
+e_decay = 1\
+e_min = 0.00\
+anneal_max = 0.7\
+rollout = 5\
+num_atoms = 100\
+vmin = 0.0\
+vmax = 2.0\
+update_every = 2500\
+print_every = 100\
+update_type = 'soft'
 
 Network Architectures = (400, 300) # dense layers
