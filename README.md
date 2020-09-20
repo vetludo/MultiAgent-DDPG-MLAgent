@@ -46,7 +46,7 @@ Episode 500	Average Score: 37.54
 
 ## Future Work
 
--Evaluates the performance of various deep RL algorithms such as TRPO, CEM, CMA-ES and D4PG, on this multi agent tasks to figure out which are best suited.
--Change the rewards system of the environment so that can try multi agents competiting each others instead of cooperation like this project.
+- Evaluates the performance of various deep RL algorithms such as TRPO, CEM, CMA-ES and D4PG, on this multi agent tasks to figure out which are best suited.
+- Change the rewards system of the environment so that can try multi agents competiting each others instead of cooperation like this project.
 
 Stay tuned.
