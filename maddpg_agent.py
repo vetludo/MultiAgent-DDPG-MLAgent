@@ -1,3 +1,10 @@
+"""
+This is the multiagent class for handling two DDPG agent for each racket. 
+Each agent is using DDPG and only input own observations to actor network and learn all states and actions of both agent in critic network.
+I have implemented replay buffer memory initialization, n_step rollout and annealing epilson policy.
+A replay buffer class is implemented for storing experiences for agents to learn.
+"""
+
 import torch
 import torch.optim as optim
 import numpy as np
@@ -8,6 +15,9 @@ from .model import Actor, Critic
 
 class MADDPG_Net:
     def __init__(self, env, args):
+        np.random.seed(args.random_seed)        
+        random.seed(args.random_seed)
+        
         self.t_step = 0
         self.avg_score = 0
         self.update_every = args.update_every
@@ -189,7 +199,8 @@ class ReplayBuffer:
                 return
             experience = self._n_stack()
         obs, next_obs, actions, rewards, dones = experience
-        actions = torch.from_numpy(np.concatenate(actions)).float()
+        actions = np.concatenate(actions)
+        actions = torch.from_numpy(actions).float()
         rewards = torch.from_numpy(rewards).float()
         dones = torch.tensor(dones).float()
 
