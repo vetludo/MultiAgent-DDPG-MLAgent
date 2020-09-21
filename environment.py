@@ -2,10 +2,11 @@ import torch
 from unityagents import UnityEnvironment
 import numpy as np
 
-"""
-This is the environment wrapper for handling raw environment from mlagent with some data transformation. 
-"""
+
 class Environment:
+    """
+    This is the environment wrapper for handling raw environment from mlagent with some data transformation. 
+    """
     def __init__(self, env_filepath):
         self.env = UnityEnvironment(file_name=env_filepath)
         self.brain_name = self.env.brain_names[0]
