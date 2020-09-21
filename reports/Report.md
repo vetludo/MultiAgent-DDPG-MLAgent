@@ -24,9 +24,18 @@ update_type = 'hard'
 Network Architectures = (400, 300) # dense layers
 
 ## Description of the algorithm
+### Deep Deterministic Policy Gradient (DDPG)
 This project is a multi agent cooperation environment. Therefore, I have used Multi Agent Deep Deterministic Policy Gradient (MADDPG) algorithm. Deep Deterministic Policy Gradient (DDPG) is an algorithm which concurrently learns a Q-function and a policy. It uses off-policy data and the Bellman equation to learn the Q-function, and uses the Q-function to learn the policy. DDPG is usually being used for environments with continuous action spaces like this project.
 
+![ddpq](/assets/DDPG.svg)
+
+### Multi Agent Deep Deterministic Policy Gradient (MADDPG)
 The environment of this project consists of two rackets playing tennis. They are trained to pass the balls to each others. Each racket is trained with its own DDPG network and give the observations and actions from all agents to its critic network but only its own observation to its actor network. Therefore, each agents can act with its own observation without knowing the observation and action of other agents.
+
+![maddpq](/assets/MADDPG-algo.png)
+
+The main concept behind this algorithm is summarized in this illustration:
+![maddpq_concept](/assets/MADDPG.png)
 
 ## Report
 
