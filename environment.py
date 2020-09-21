@@ -1,3 +1,8 @@
+"""
+This is the environment wrapper for handling raw environment from mlagent. 
+I have done some data transformation and functions for easier use in other class.
+"""
+
 import torch
 from unityagents import UnityEnvironment
 import numpy as np
