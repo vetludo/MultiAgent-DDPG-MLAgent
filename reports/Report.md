@@ -25,7 +25,7 @@ Network Architectures = (400, 300) # dense layers
 
 ## Report
 
-The agent is trained by Multi Agent Deep Deterministic Policy Gradient (MADDPG) for this environment. After episode 1000, the agents has already got an average score +0.5 over 100 consecutive episodes.
+The agent is trained by Multi Agent Deep Deterministic Policy Gradient (MADDPG) for this environment. After episode 1100, the agents has already got an average score +0.5 over 100 consecutive episodes.
 
 Episode 100	Average Score: 0.00\
 Episode 200	Average Score: 0.03\
