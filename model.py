@@ -9,10 +9,10 @@ def initialize_weights(net, low=-3e-2, high=3e-2):
         param.data.uniform_(low, high)
 
 
-"""
-Actor Network
-"""
 class Actor(nn.Module):
+    """
+    Actor Network
+    """
     def __init__(self, state_size, action_size, seed, fc1_units=400, fc2_units=300):
         super(Actor, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -26,10 +26,11 @@ class Actor(nn.Module):
         x = F.relu(self.fc2(x))
         return self.fc3(x).tanh()
 
-"""
-Critic Network
-"""
+
 class Critic(nn.Module):
+    """
+    Critic Network
+    """
     def __init__(self, state_size, action_size, num_atoms, seed, fcs1_units=400, fc2_units=300):
         super(Critic, self).__init__()
         self.fcs1 = nn.Linear(state_size, fcs1_units)
