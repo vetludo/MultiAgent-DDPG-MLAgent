@@ -1,13 +1,11 @@
-"""
-This is the environment wrapper for handling raw environment from mlagent. 
-I have done some data transformation and functions for easier use in other class.
-"""
-
 import torch
 from unityagents import UnityEnvironment
 import numpy as np
 
-
+"""
+This is the environment wrapper for handling raw environment from mlagent. 
+I have done some data transformation and functions for easier use in other class.
+"""
 class Environment:
     def __init__(self, env_filepath):
         self.env = UnityEnvironment(file_name=env_filepath)
