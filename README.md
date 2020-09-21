@@ -36,11 +36,18 @@ Run tennis.ipynb and follow the instruction.
 
 The agent is trained by Multi Agent Deep Deterministic Policy Gradient (MADDPG) for this environment. After episode 1000, the agents has already got an average score +0.5 over 100 consecutive episodes.
 
-Episode 100	Average Score: 7.59\
-Episode 200	Average Score: 31.91\
-Episode 300	Average Score: 36.51\
-Episode 400	Average Score: 37.68\
-Episode 500	Average Score: 37.54
+Episode 100	Average Score: 0.00\
+Episode 200	Average Score: 0.03\
+Episode 300	Average Score: 0.08\
+Episode 400	Average Score: 0.09\
+Episode 500	Average Score: 0.10\
+Episode 600	Average Score: 0.10\
+Episode 700	Average Score: 0.12\
+Episode 800	Average Score: 0.13\
+Episode 900	Average Score: 0.26\
+Episode 1000	Average Score: 0.32\
+Episode 1100	Average Score: 0.79\
+Episode 1200	Average Score: 1.86
 
 ![report](/assets/report.png)
 
