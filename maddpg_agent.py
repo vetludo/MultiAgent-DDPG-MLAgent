@@ -5,11 +5,12 @@ from collections import deque
 import random
 from .model import Actor, Critic
 
-"""
-This is the multiagent class for handling two DDPG agent for each racket.
-I have implemented replay buffer memory initialization, n_step rollout and annealing epilson policy.
-"""
+
 class MADDPG_Net:
+    """
+    This is the multiagent class for handling two DDPG agent for each racket.
+    I have implemented replay buffer memory initialization, n_step rollout and annealing epilson policy.
+    """
     def __init__(self, env, args):
         np.random.seed(args.random_seed)        
         random.seed(args.random_seed)
@@ -109,11 +110,12 @@ class MADDPG_Net:
     def _gauss_noise(self, shape):
         n = np.random.normal(0, 1, shape)
         return self.e * n
+    
 
-"""
-Each agent is using DDPG and only input own observations to actor network and learn all states and actions of both agent in critic network.
-"""
 class DDPG_Agent:
+    """
+    Each agent is using DDPG and only input own observations to actor network and learn all states and actions of both agent in critic network.
+    """
     def __init__(self, state_size, action_size, args, agent_count=1, l2_decay=0.0001):
         self.device = args.device
         self.eval = args.eval
@@ -181,10 +183,11 @@ class DDPG_Agent:
             projected_probs[idx].index_add_(0, upper_bound[idx].long(), m_upper[idx].double())
         return projected_probs.float()
 
-"""
-A replay buffer class is implemented for storing experiences for agents to learn.
-"""
+
 class ReplayBuffer:
+    """
+    A replay buffer class is implemented for storing experiences for agents to learn.
+    """
     def __init__(self, device, buffer_size=100000, gamma=0.99, rollout=5, agent_count=1):
         self.buffer = deque(maxlen=buffer_size)
         self.device = device
